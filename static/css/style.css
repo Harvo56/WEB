@@ -1,0 +1,35 @@
+.tt{
+    background-color: red;
+    height: 60px;
+}
+
+.pm{
+    background-color: yellow;
+    height: 60px;
+}
+
+.ak{
+    background-color: violet;
+    height: 60px;
+}
+
+.foot {
+    background-color: crimson;
+    height: 80px;  
+}
+
+.content {
+    background-color: aqua;
+    padding-bottom: 90px;
+}
+
+.up-logo {
+    height: 150px;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: blue;
+}
+
