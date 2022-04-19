@@ -6,18 +6,17 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def ind():
-    return render_template("base.html")
+    return render_template("base.html", title='Главная')
 
 
-#@app.route('/training/<prof>')
-#def prof(prof):
-#    if prof.find("инженер") != -1 or prof.find("строитель") != -1:
-#        it = "Инженерные тренажеры"
-#    elif prof.find("ученый") != -1:
-#        it = "Научные симуляторы"
-#    else:
-#        it = "Неправильный ввод специальности!"
-#    return render_template("base.html", x=prof, y=it)
+@app.route('/register')
+def register():
+    return render_template("register.html", title='Регистрация')
+
+
+@app.route('/login')
+def login():
+    return render_template("login.html", title='Авторизация')
 
 
 if __name__ == '__main__':

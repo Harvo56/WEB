@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<br><br>
+<h1 class="text-center">Регистрация</h1>
+<form action="/register" method="post" class="form-contact text-center">
+<p><label for="name">Имя:</label>
+    <input type="text" name="name" id="name" value=""required></p>
+<p><label for="name">Фамилия:</label>
+    <input type="text" name="surname" id="surname" value=""required></p>
+<p><label>Возраст:</label>
+    <input type="text" name="old" value=""required></p>
+<p><label>Email:</label>
+    <input type="text" name="email" value=""required></p>
+<p><label>Пароль:</label>
+    <input type="password" name="psw" value=""required></p>
+<p><label>Повтор пароля:</label><br>
+    <input type="password" name="psw2" value=""required></p><br>
+<p><input type="submit" value="Регистрация"> </p>
+</form>
+{% endblock %}
