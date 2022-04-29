@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center"><br><br>
+    <h3 class="title">Регистрация нового пользователя</h3><br>
+    <div class="box">
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="warn">
+                {{ messages[0]}}.<br>Прейти на 
+                <a href="{{ url_for('authlog.login_page') }}">
+                    страницу входа.</a>
+            </div> <br>
+        {% endif %}
+        {% endwith %}
+        
+        <form method="POST" action="{{ url_for('authlog.register_post') }}">
+            
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="email" name="email" placeholder="Email" autofocus="" required >
+                </div>
+            </div>
+            <br>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="name" placeholder="Name" autofocus="" required >
+                </div>
+            </div>
+            <br>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="password" name="password" placeholder="Password" required >
+                </div>
+            </div>
+            <br>
+            <button class="button is-block is-info is-large is-fullwidth">Регистрация</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

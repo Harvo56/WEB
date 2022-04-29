@@ -1,0 +1,16 @@
+a {margin: 10px 50px 10px 10px;
+   
+}
+body {
+    background-color: aquamarine;
+}
+.bckgr {
+    background-color: aqua;
+}
+.warn{
+    font-weight: bold;
+    width: 350px;
+    background-color: #ddf00bf8;
+    margin: 0 auto;
+    border: 3px solid #FF4343;
+}

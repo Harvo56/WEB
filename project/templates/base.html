@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flask Auth Example</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+    
+                <div class="container bckgr">
+
+                    <div class="text-center">
+                        <div class="">
+                            <a href="{{ url_for('mainlog.index') }}" class="link-primary">
+                                Главная
+                            </a>
+                            <a href="{{ url_for('mainlog.profile') }}" class="link-success">
+                                Профиль
+                            </a>
+                            <a href="{{ url_for('authlog.login_page') }}" class="link-danger">
+                                Вход
+                            </a>
+                            <a href="{{ url_for('authlog.register_page') }}" class="link-warning">
+                                Регистрация
+                            </a>
+                            <a href="{{ url_for('authlog.logout_page') }}" class="link-info">
+                                Выход
+                            </a>
+                        </div>
+                    </div>
+                </div>
+           
+
+            <div>
+               {% block content %}
+               {% endblock %}
+            </div>
+       
+ 
+</body>
+
+</html>
